@@ -20,7 +20,7 @@ public class StepPesquisarProduto {
 	@Before
 	public void setup() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
 		this.driver = new ChromeDriver();
 		driver.manage().window().maximize();
 

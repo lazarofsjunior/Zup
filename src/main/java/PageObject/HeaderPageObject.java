@@ -18,8 +18,8 @@ public class HeaderPageObject {
 
 	private By search = By.id("inpHeaderSearch");
 	private By buscar = By.id("btnHeaderSearch");
-	private By tituloResultado = By.className("nm-left-top-search");
-	private By notebook = By.id("product_224780400");
+	private By tituloResultado = By.id("product_2261927");
+	private By notebook = By.id("product_2261927");
 	private By adicionarSacola = By.xpath("/html/body/div[3]/div[5]/div[1]/div[4]/div[2]/button[2]/span");
 	private By tituloProdutoCarrinho = By.className("header-tip__product-txt");
 
@@ -42,8 +42,8 @@ public class HeaderPageObject {
 
 	public void tituloDoResultado() {
 
-		WebElement wait = (new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.visibilityOfElementLocated(By.className("nm-left-top-search")));
+		WebElement wait = (new WebDriverWait(driver, 20))
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("product_2261927")));
 
 		System.out.println(driver.findElement(tituloResultado).getText());
 
@@ -56,13 +56,13 @@ public class HeaderPageObject {
 
 	public void esperarNotebookVisivel() {
 
-		WebElement wait = (new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.visibilityOfElementLocated(By.className("nm-left-top-search")));
+		WebElement wait = (new WebDriverWait(driver, 15))
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("product_2261927")));
 	}
 
 	public void acionarAdicionarSacola() {
 
-		WebElement wait = (new WebDriverWait(driver, 10))
+		WebElement wait = (new WebDriverWait(driver, 16))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Mais formas de pagamento")));
 
 		driver.findElement(adicionarSacola).click();
